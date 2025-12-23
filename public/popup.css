@@ -25,10 +25,15 @@
 }
 
 #operations-bridges-close {
-    background: #fff;
+    background: #fff;        /* default white */
     color: #000;
     border: none;
     padding: 12px 24px;
     font-size: 16px;
     cursor: pointer;
+    transition: background 0.3s;  /* smooth hover */
+}
+
+#operations-bridges-close:hover {
+    background: #636363;     /* change colour on hover */
 }
