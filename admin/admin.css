@@ -1,0 +1,71 @@
+/* =========================
+   Toggle Switch
+   ========================= */
+
+.ob-switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+}
+
+.ob-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.ob-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #ccc;
+    border-radius: 24px;
+    transition: 0.3s;
+}
+
+.ob-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.ob-switch input:checked + .ob-slider {
+    background-color: #2271b1;
+}
+
+.ob-switch input:checked + .ob-slider:before {
+    transform: translateX(22px);
+}
+
+/* =========================
+   Year Picker Fields
+   ========================= */
+
+.ob-date-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ob-calendar-icon {
+    cursor: pointer;
+    font-size: 20px;
+    color: #2271b1;
+}
+
+.ob-calendar-icon:hover {
+    color: #135e96;
+}
+
+/* Hide month/day for year-only picker */
+.ob-year-only .ui-datepicker-calendar,
+.ob-year-only .ui-datepicker-month {
+    display: none;
+}
